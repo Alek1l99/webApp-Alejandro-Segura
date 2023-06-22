@@ -1,0 +1,20 @@
+<div class="barNav">
+  <div class="contentNav">
+    <div class="logo-Alek-container">
+      <a class="" routerLink="">
+        <img [src]="icons[0].image" class="home-icon" alt="home-castel">
+      </a>
+    </div>
+    <div>
+    <ul class="sideNav-list">
+      <li class="sideNav-list-items" *ngFor="let item of menuList">
+        <a href="" class="sideNav-lits-link" [routerLink]="[item.routerLink]">
+            <span class="sidenav-link-label">
+              {{item.label}}
+            </span>
+        </a>
+      </li>
+    </ul>
+    </div>
+</div>
+</div>

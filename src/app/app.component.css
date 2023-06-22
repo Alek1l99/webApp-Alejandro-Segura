@@ -1,0 +1,57 @@
+.renderContainer {
+  display: grid;
+  grid-template-columns: 7% 93%;
+  grid-template-rows: auto;
+  }
+
+  .sideRender {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 7%;
+  }
+  .bodyRender{
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: left top;
+  }
+
+  .barRender{
+    display: none;
+  }
+
+@media only screen and (max-width: 46em){
+  .barRender{
+    display: flex;
+  }
+  .renderContainer{
+    grid-template-columns: 100%;
+  }
+  .sideRender{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 48em) and (max-width: 57em) {
+  .renderContainer {
+    grid-template-columns: 13% 87%;
+  }
+  .sideRender {
+    width: 13%;
+  }
+
+}
+@media screen and (min-width: 64em) and (max-width: 119em){
+  .renderContainer {
+    grid-template-columns: 9% 93%;
+  }
+  .sideRender {
+    width: 9%;
+  }
+}
+
+@media screen and (min-width:  120em) {
+
+
+}
