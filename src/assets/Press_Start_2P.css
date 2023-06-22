@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url(alek-websit-fonts/Press_Start_2P/Press-Start-2P-normal-400.eot);
+  src: local('./alek-websit-fonts/Press_Start_2P'), url(alek-websit-fonts/Press_Start_2P/Press-Start-2P-normal-400.woff) format('woff'), url(alek-websit-fonts/Press_Start_2P/Press-Start-2P-normal-400.ttf) format('truetype'), url(alek-websit-fonts/Press_Start_2P/Press-Start-2P-normal-400.eot?#iefix) format('embedded-opentype'), url(alek-websit-fonts/Press_Start_2P/Press-Start-2P-normal-400.svg#PressStart2P) format('svg'), url(alek-websit-fonts/Press_Start_2P/Press-Start-2P-normal-400.woff2) format('woff2');
+}
+

@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variables de la barra de navegación*/
+:root{
+  --sideNavBackground:#BF0404;
+}
+html, body{
+  height: 100%;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2{
+  font-family: 'Press Start 2P', cursive;
+}
+h1{
+color: #ffff;
+font-size: 80pt;
+line-height: 96pt;
+}
+
+h2{
+  padding: 25pt 0 25pt 0;
+  text-align: left;
+  color: #FF5946;
+  font-size: 30pt;
+  text-shadow: 0px 3px 6px #FF001A;
+}
+
+body{
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+p{
+  padding: 20pt 0 20pt 0;
+  color: white;
+  font-size: 20pt;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height : 37pt;
+}
+button{
+color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+li{
+  list-style: none;
+  text-align: center;
+  line-height: 50px;
+}
+
+a{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
