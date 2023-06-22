@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(alek-websit-fonts/Source_Sans_Pro/Source-Sans-Pro.eot);
+  src: local('./alek-websit-fonts/Source_Sans_Pro'), url(alek-websit-fonts/Source_Sans_Pro/Source-Sans-Pro.eot?#iefix) format('embedded-opentype'), url(alek-websit-fonts/Source_Sans_Pro/Source-Sans-Pro.ttf) format('truetype'), url(alek-websit-fonts/Source_Sans_Pro/Source-Sans-Pro.woff2) format('woff2'), url(alek-websit-fonts/Source_Sans_Pro/Source-Sans-Pro.woff) format('woff'), url(alek-websit-fonts/Source_Sans_Pro/Source-Sans-Pro.svg#SourceSansPro) format('svg');
+}
+
