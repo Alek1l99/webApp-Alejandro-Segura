@@ -1,14 +1,3 @@
-footer{
-  background-color: var(--sideNavBackground);
-  position: absolute;
-  bottom:0;
-  margin:0;
-  display: none;
-  width: 100%;
-  height: 2.5em;
-  justify-content: center;
-  justify-items: center;
-}
 .renderContainer {
   display: grid;
   grid-template-columns: 7% 93%;
@@ -36,20 +25,11 @@ footer{
   .barRender{
     display: flex;
   }
-  footer{
-  display: flex;
-  }
   .renderContainer{
     grid-template-columns: 100%;
   }
   .sideRender{
     display: none;
-  }
-  .network-Alek-container{
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    gap: 18px;
   }
 }
 
