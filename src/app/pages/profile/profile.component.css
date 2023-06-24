@@ -1,0 +1,66 @@
+.perfilContainer{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+}
+
+@media only screen and (max-width:19em) {
+
+
+}
+@media only screen and (max-width: 46em){
+  h2{
+    font-size: 15pt;
+  }
+  p{
+    font-size:10pt;
+    line-height: normal;
+  }
+  .perfilContainer{
+    background-position: center center;
+    background-position: 0px 0px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+  }
+  .containerImageAlek img{
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 47em) and (max-width: 57em) {
+
+}
+@media screen and (min-width: 64em) {
+
+}
+@media screen and (min-width: 120em) {
+
+.infoPerfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.infoPerfil article{
+  width: 85%;
+}
+.containerImageAlek{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.containerImageAlek img{
+  width: 100%;
+}
+
+}
