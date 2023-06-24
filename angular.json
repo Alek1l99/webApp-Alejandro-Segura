@@ -25,7 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/Press_Start_2P.css",
+              "src/assets/Source_Sans_Pro.css"
             ],
             "scripts": []
           },

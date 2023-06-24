@@ -1,12 +1,12 @@
 export const dataListMenu = [
   {label:'Perfil',
-  routerLink:'perfil'},
+  routerLink:'profile'},
   {label:'Portafolio',
-  routerLink:'portafolio'},
+  routerLink:'portfolio'},
   {label:'Habilidades',
-  routerLink:'habilidades'},
+  routerLink:'skills'},
   {label:'Contacto',
-  routerLink:'contacto'}
+  routerLink:'contact'}
   ];
 
   export const sgvIcons =[
