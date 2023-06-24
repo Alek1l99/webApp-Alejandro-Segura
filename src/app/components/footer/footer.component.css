@@ -19,6 +19,8 @@ footer{
     display: flex;
     flex-direction: row;
     align-items:center;
-    gap: 18px;
+    gap: 1.13em;
   }
 }
+
+

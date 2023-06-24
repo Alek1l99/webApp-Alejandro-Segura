@@ -1,4 +1,4 @@
-.homeContent{
+.homeContent {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -9,19 +9,19 @@
   align-items: center;
 }
 
-h1{
+h1 {
   margin: 0;
 }
 
-.homeContent button{
+.homeContent button {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #6204BF;
   color: white;
-  font-size: 30pt;
-  height: 90px;
-  width: 350px;
-  border-radius: 34pt;
+  font-size: 2em; /* Adjusted to relative font size */
+  height: 4.5em; /* Adjusted to relative height */
+  width: 17.5em; /* Adjusted to relative width */
+  border-radius: 3em; /* Adjusted to relative border radius */
   border: none;
 }
