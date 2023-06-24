@@ -1,0 +1,27 @@
+.homeContent{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  gap: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  margin: 0;
+}
+
+.homeContent button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6204BF;
+  color: white;
+  font-size: 30pt;
+  height: 90px;
+  width: 350px;
+  border-radius: 34pt;
+  border: none;
+}
