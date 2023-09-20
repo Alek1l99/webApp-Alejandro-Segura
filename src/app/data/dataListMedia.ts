@@ -1,16 +1,17 @@
 export const dataListMenu = [
-  {label:'Perfil',
+  {label:'Profile',
   routerLink:'profile'},
-  {label:'Portafolio',
+  {label:'Portfolio',
   routerLink:'portfolio'},
-  {label:'Habilidades',
+  {label:'Skills',
   routerLink:'skills'},
-  {label:'Contacto',
+  {label:'Contact',
   routerLink:'contact'}
   ];
 
   export const sgvIcons =[
     {image:'../assets/icons/castle-icon.svg'},
+    {image:'../assets/icons/youtube-icon.svg'},
     {image:'../assets/icons/github-icon.svg'},
     {image:'../assets/icons/linkedin-icon.svg'}
   ]
