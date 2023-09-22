@@ -1,30 +1,31 @@
-/* General Styles */
-.skillsContainer {
-  margin: 0;
-  padding: 0 8em 0 10em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-size: auto;
-  background-repeat: repeat;
-  background-color: #343940;
-  background-position: center top;
-}
-
 p {
   color: white;
+  margin: 0;
 }
 
 .circle p {
   margin: 0;
+}
 
+.background-opacity {
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #4C5159;
+}
+
+@media screen and (min-width: 120em) {
+  /* General Styles */
+.skillsContainer {
+  padding: 0 8em 0 10em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .progress-container {
   margin-left: 6em;
-  /* Espacio entre el círculo y la barra de progreso (ajustado al tamaño del círculo) */
   flex-grow: 1;
-  /* Para que la barra de progreso ocupe todo el espacio disponible */
 }
 
 .circle-container {
@@ -37,19 +38,16 @@ p {
 .skills-class {
   display: flex;
   align-items: center;
-  margin-bottom: 2em;
-  /* Espacio entre las secciones */
+  margin-bottom: 2.5em;
 }
 
 .infoskills {
-  margin: 0 4em 2.8em 0em;
+  margin: 0 4em 0em 0em;
   flex: 1;
-  /* Takes up all available space on the left */
 }
 
-.skills-container {
+.skills-progress {
   flex: 1;
-  /* Takes up all available space on the right */
 }
 
 /* Styles for Circles and Progress Bars */
@@ -57,9 +55,8 @@ p {
   height: 7em;
   width: 7em;
   border-radius: 50%;
-  /* Hacemos el círculo completamente redondo */
   background-color: #6204bf;
-  box-shadow: 0px 0.3em 0.6em rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,30 +65,20 @@ p {
 .progress-bar {
   width: 30em;
   height: 10px;
-  /* Ajusta la altura de la barra de progreso según tus preferencias */
   background-color: #4C5159;
-  /* Fondo gris */
   border-radius: 5px;
-  /* Redondea los extremos de la barra */
   overflow: hidden;
 }
 
 .progress {
   width: 10%;
-  /* Ajusta el valor de progreso (por ejemplo, 70%) */
   height: 100%;
   background-color: #676C73;
-  /* Color de progreso */
   border-radius: 5px;
-  /* Redondea los extremos de la barra */
   transition: width 0.3s ease-in-out;
-  /* Agrega una transición suave */
 }
 
-
-/* proof */
-
-/* Estilos para el popup */
+/* Styles for the popup */
 .popup {
   position: fixed;
   top: 46%;
@@ -128,27 +115,17 @@ p {
   padding: 0;
 }
 
-
-/* Estilo para la rejilla de imágenes */
+/* Styles for the image grid */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* Dos columnas con ancho mínimo de 200px */
-  grid-row-gap: 2.5em;
-  /* Espacio entre las imágenes */
+  gap: 2.5em;
   justify-items: center;
-  /* Centra las imágenes horizontalmente */
 }
 
-.background-opacity {
-  opacity: 0.9; /* Opacidad del 60% */
-  transition: opacity 0.3s ease-in-out; /* Agrega una transición suave */
-}
-
-/* Estilo para cada elemento de la rejilla de imágenes */
+/* Styles for each image item */
 .image-item {
   text-align: center;
-  /* Centra el contenido */
 }
 
 li {
@@ -157,36 +134,20 @@ li {
   font-size: 1.4em;
   text-align: left;
   line-height: 1.5em;
-  /* Ajusta el espaciado vertical entre elementos de la lista */
 }
-
-
-
 
 /* Responsive Styles */
-@media only screen and (min-width: 47em) and (max-width: 57em) {
-  /* Specific styles for screens between 47em and 57em wide */
-}
 
-@media screen and (min-width: 64em) {
-  /* Specific styles for screens 64em wide or larger */
-}
-
-@media screen and (min-width: 120em) {
-
-  /* Specific styles for screens 120em wide or larger */
   .infoskills {
-    padding: 0 7em 2.8em 0em;
+    padding: 0 7em 0em 0em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
 
   .skills-container {
     display: flex;
     flex-direction: column;
-    /* Changing direction to column */
     justify-content: center;
     align-items: start;
   }

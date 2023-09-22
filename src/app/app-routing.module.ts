@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'profile', component: ProfileComponent},
   { path: 'skills', component: SkillsComponent},
+  /*{ path: 'contact', component: ContactComponent},*/
   {path:'**', redirectTo:'/'}
 ];
 

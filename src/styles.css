@@ -3,9 +3,12 @@
   --sideNavBackground: #BF0404;
 }
 
+
+/**/
+/* Establece un alto mínimo para que la página se vea correctamente */
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 * {
@@ -18,21 +21,21 @@ h1,
 h2,
 h3 {
   font-family: 'Press Start 2P', cursive;
+  line-height: 1.2;
 }
 
 h1 {
   color: #fff;
   font-size: 4em;
   /* Adjusted to relative font size */
-  line-height: 1.2;
   /* Adjusted line height for better readability */
 }
 
 h2 {
-  padding: 2em 0;
+  margin-bottom: 1.2em;
   text-align: left;
   color: #FF5946;
-  font-size: 1.5em;
+  font-size: 2.5em;
   /* Adjusted to relative font size */
   text-shadow: 0 0.0625em 0.125em #FF001A;
 }

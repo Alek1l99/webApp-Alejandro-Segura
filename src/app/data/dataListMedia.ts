@@ -55,12 +55,10 @@ export const dataListMenu = [
 
 
   export const backgoundList =[
-    {image:'../assets/backgrounds/backgrount-pixelart-phixalek-website-alejandro-segura.svg'},
-    {image:'../assets/backgrounds/backgrount-alejandro-segura-website.jpg'}
-    // {image:'../assets/backgrounds'}
+    {url:'../assets/backgrounds/backgrount-pixelart-phixalek-website-alejandro-segura.svg', alt:'PhixAlke bacground pixelart web alejandro segura'},
+    {url:'../assets/backgrounds/backgrount-alejandro-segura-website.jpg', alt:''}
   ]
 
   export const images =[
-      {image:'../assets/image/alek1l99-pixelart-website-alejandro-segura.svg'},
-    // {image:'../assets/backgrounds'}
+      {url:'../assets/image/phixAlek-pixelart-website-alejandro-segura.svg', alt:'PhixAlke bacground pixelart web alejandro segura'}
   ]

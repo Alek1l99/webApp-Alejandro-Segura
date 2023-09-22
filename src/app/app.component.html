@@ -1,6 +1,6 @@
 <app-bar-nav class="barRender"></app-bar-nav>
-<div class="renderContainer">
+<div class="renderContainer" [style.height.px]="heightDevice" [style.background-image]="'url(' + background[0].url + ')'">
   <app-side-nav class="sideRender"></app-side-nav>
-  <router-outlet class="bodyRender"></router-outlet>
+  <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
