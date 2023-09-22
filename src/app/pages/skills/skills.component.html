@@ -1,1 +1,52 @@
-<p>skills works!</p>
+<div class="skillsContainer" [style.height.px]="heightDevice"
+  [style.background-image]="'url(' + background[0].image + ')'" [class.background-opacity]="applyBackgroundOpacity">
+  <div class="infoskills">
+    <section>
+      <h2>Skills & Experience</h2>
+      <article>
+        <p>As a Full Stack developer, my focus spans both frontend and backend, which has allowed me to participate in
+          various projects and highlight in interface interaction and design. My expertise lies in technologies such as
+          .NET, Angular, JavaScript, and Node, and I have had the opportunity to apply these skills at renowned
+          companies like Grupo EMI and Annar Health Technologies.</p>
+        <p>Furthermore, I have developed effective and engaging web applications, collaborated in multidisciplinary
+          teams to achieve business goals, optimized projects to enhance performance and usability, and taught key web
+          development technologies. My commitment to excellence and passion for technology drive me to continue growing
+          professionally.</p>
+      </article>
+    </section>
+  </div>
+  <div class="skills-container">
+    <section class="skills-class" *ngFor="let skill of skills" [attr.name]="skill.label">
+      <div class="circle-container">
+        <div class="circle" (click)="openPopup(skill.name)">
+          <p>{{ skill.name }}</p>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="getProgressWidth(skill.name)"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="popup" *ngIf="isPopupOpen" (click)="closePopup()">
+  <button class="popup-close-button" (click)="closePopup()">X</button>
+  <div class="popup-title">
+    <h3>{{ popupInfo.title }}</h3>
+  </div>
+  <div class="popup-content">
+    <div class="column">
+      <ul>
+        <li *ngFor="let item of popupInfo.description">{{ item }}</li>
+      </ul>
+    </div>
+    <div class="column">
+      <div class="image-grid">
+        <div *ngFor="let image of popupImages" class="image-item">
+          <img [src]="image.url" [alt]="image.alt">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

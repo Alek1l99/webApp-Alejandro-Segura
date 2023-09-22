@@ -1,60 +1,79 @@
 /* Variables for the navigation bar */
 :root {
   --sideNavBackground: #BF0404;
-  }
+}
 
-  html, body {
+html,
+body {
   height: 100%;
-  }
+}
 
-  * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
-  h1, h2 {
+}
+
+h1,
+h2,
+h3 {
   font-family: 'Press Start 2P', cursive;
-  }
+}
 
-  h1 {
+h1 {
   color: #fff;
-  font-size: 4em; /* Adjusted to relative font size /
-  line-height: 1.2; / Adjusted line height for better readability */
-  }
+  font-size: 4em;
+  /* Adjusted to relative font size */
+  line-height: 1.2;
+  /* Adjusted line height for better readability */
+}
 
-  h2 {
+h2 {
   padding: 2em 0;
   text-align: left;
   color: #FF5946;
-  font-size: 1.5em; /* Adjusted to relative font size */
+  font-size: 1.5em;
+  /* Adjusted to relative font size */
   text-shadow: 0 0.0625em 0.125em #FF001A;
-  }
+}
 
-  body {
+h3 {
+  text-align: center;
+  color: #FF5946;
+  font-size: 1.5em;
+  /* Adjusted to relative font size */
+  text-shadow: 0 0.0625em 0.125em #FF001A;
+}
+
+body {
   position: relative;
   font-family: 'Source Sans Pro', sans-serif;
-  }
+}
 
-  p {
-  padding: 1.25em 0;
+p {
+  padding: 1em 0;
   color: #fff;
-  font-size: 1.25em; /* Adjusted to relative font size /
-  line-height: 1.2; / Adjusted line height for better readability */
-  }
+  font-size: 1.5em;
+  /* Adjusted to relative font size */
+  line-height: 1.2;
+  /* Adjusted line height for better readability */
+}
 
-  button {
+button {
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
-  }
+}
 
-  li {
+li {
   list-style: none;
   text-align: center;
-  line-height: 3em; /* Adjusted line height for better spacing */
-  }
+  line-height: 3em;
+  /* Adjusted line height for better spacing */
+}
 
-  a {
+a {
   text-decoration: none;
-  font-size: 1em; /* Adjusted to relative font size */
+  font-size: 1em;
+  /* Adjusted to relative font size */
   color: #fff;
-  }
+}
