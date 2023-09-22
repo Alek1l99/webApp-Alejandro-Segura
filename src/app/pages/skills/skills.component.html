@@ -1,5 +1,4 @@
-<div class="skillsContainer" [style.height.px]="heightDevice"
-  [style.background-image]="'url(' + background[0].image + ')'" [class.background-opacity]="applyBackgroundOpacity">
+<div class="skillsContainer" [class.background-opacity]="applyBackgroundOpacity">
   <div class="infoskills">
     <section>
       <h2>Skills & Experience</h2>
@@ -15,7 +14,7 @@
       </article>
     </section>
   </div>
-  <div class="skills-container">
+  <div class="skills-progress">
     <section class="skills-class" *ngFor="let skill of skills" [attr.name]="skill.label">
       <div class="circle-container">
         <div class="circle" (click)="openPopup(skill.name)">

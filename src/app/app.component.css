@@ -1,57 +1,67 @@
+/* Hide the bar rendering by default */
+.barRender {
+  display: none;
+}
+
+/* Styles for the main container */
 .renderContainer {
   display: grid;
-  grid-template-columns: 7% 93%;
-  grid-template-rows: auto;
-  }
+  grid-template-columns: 7% 93%; /* Use 1fr to fill the remaining space */
+  background: bottom right/fixed repeat;
+  background-color: #343940;
+}
 
-  .sideRender {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 7%;
-  }
-  .bodyRender{
-  background-size: cover ;
-  background-repeat: no-repeat;
-  background-position: left top;
-  }
+/* Styles for the sidebar */
+.sideRender {
+  position: fixed;
+  width: 8.5em; /* Fixed width in em or rem */
+  height: 100%; /* Occupy full available height */
+}
 
-  .barRender{
-    display: none;
-  }
+/* Styles for the content */
+.bodyRender {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em; /* Padding in em or rem */
+  height: 100%; /* Occupy full available height */
+  background-color: #fff; /* Example: a white background to highlight content */
+  box-shadow: 0px 0.3em 0.6em rgba(0, 0, 0, 0.6); /* Add shadow to content if necessary */
+}
 
-@media only screen and (max-width: 46em){
-  .barRender{
-    display: flex;
-  }
-  .renderContainer{
+/* Media query for small screens */
+@media only screen and (max-width: 46em) {
+  .renderContainer {
     grid-template-columns: 100%;
   }
-  .sideRender{
-    display: none;
+  .sideRender {
+    display: none; /* Hide sidebar on small screens */
+  }
+  .bodyRender {
+    width: 100%;
+    padding: 2em;
   }
 }
 
+/* Additional media queries to adjust design on medium and large screens */
 @media only screen and (min-width: 48em) and (max-width: 57em) {
   .renderContainer {
     grid-template-columns: 13% 87%;
   }
   .sideRender {
-    width: 13%;
+    width: 13em;
   }
-
 }
-@media screen and (min-width: 64em) and (max-width: 119em){
+
+@media screen and (min-width: 64em) and (max-width: 119em) {
   .renderContainer {
-    grid-template-columns: 9% 93%;
+    grid-template-columns: 9% 91%;
   }
   .sideRender {
-    width: 9%;
+    width: 9em;
   }
 }
 
-@media screen and (min-width:  120em) {
-
-
+@media screen and (min-width: 120em) {
+  /* Add specific styles for extra-large screens here if needed */
 }

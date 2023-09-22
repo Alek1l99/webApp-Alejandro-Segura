@@ -1,5 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { backgoundList, images, techIcons } from 'src/app/data/dataListMedia';
+import { Component, HostListener } from '@angular/core';
+import { backgoundList, techIcons } from 'src/app/data/dataListMedia';
 
 @Component({
   selector: 'app-skills',
@@ -7,16 +7,15 @@ import { backgoundList, images, techIcons } from 'src/app/data/dataListMedia';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
-  // Declaración de propiedades del componente
-  background = backgoundList; // Una lista de fondos
-  images = images; // Una lista de imágenes
-  heightDevice: number; // Una propiedad para almacenar la altura de la ventana del navegador
+  // Declaration of component properties
+  background = backgoundList; // A list of backgrounds
+  heightDevice: number; // A property to store the browser window's height
 
-  isPopupOpen: boolean = false; // Variable para controlar si el popup está abierto
-  popupInfo: any; // Variable para almacenar la información específica del círculo
-  popupImages: any[] = []; // Arreglo para almacenar las imágenes del popup
+  isPopupOpen: boolean = false; // Variable to control if the popup is open
+  popupInfo: any; // Variable to store specific circle information
+  popupImages: any[] = []; // Array to store popup images
 
-  applyBackgroundOpacity: boolean = false; // Inicialmente sin opacidad
+  applyBackgroundOpacity: boolean = false; // Initially without opacity
 
   skills = [
     { name: 'Front', label: 'Front-progress', progress: 70 },
@@ -25,7 +24,7 @@ export class SkillsComponent {
     { name: 'Software', label: 'Software-progress', progress: 90 }
   ];
 
-  // Información específica para cada tipo de círculo
+  // Specific information for each type of circle
   circleInfo: { [key: string]: { title: string; description: string[] } } = {
     Front: {
       title: 'Front-end',
@@ -74,52 +73,51 @@ export class SkillsComponent {
   };
 
   getProgressWidth(skillName: string): number {
-    // Busca la habilidad correspondiente en el arreglo y devuelve su valor de progreso
+    // Find the corresponding skill in the array and return its progress value
     const skill = this.skills.find(skill => skill.name === skillName);
-    return skill ? skill.progress : 0; // Devuelve el valor de progreso o 0 si no se encuentra
+    return skill ? skill.progress : 0; // Return the progress value or 0 if not found
   }
 
-  // Constructor del componente
+  // Constructor of the component
   constructor() {
-    this.heightDevice = window.innerHeight; // Inicializa la propiedad 'heightDevice' con la altura actual de la ventana
-
+    this.heightDevice = window.innerHeight; // Initialize the 'heightDevice' property with the current window's height
   }
 
-  // Manejador de eventos que se dispara cuando se redimensiona la ventana del navegador
+  // Event handler triggered when the browser window is resized
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.heightDevice = event.target.innerHeight; // Actualiza la propiedad 'heightDevice' cuando se produce un cambio de tamaño en la ventana
+    this.heightDevice = event.target.innerHeight; // Update the 'heightDevice' property when a window size change occurs
   }
 
   ngOnInit(): void {
-    // ngOnInit es un método que se llama una vez que el componente se ha inicializado, pero en este caso no hace nada.
+    // ngOnInit is a method called once the component has been initialized, but in this case, it does nothing.
   }
 
   openPopup(circleType: string) {
-    console.log("esta mierda su func")
-    // Verifica si el popup ya está abierto antes de abrirlo nuevamente
+    console.log("This function works");
+    // Check if the popup is not already open before opening it again
     if (!this.isPopupOpen) {
       this.isPopupOpen = true;
       this.popupInfo = this.circleInfo[circleType];
       this.popupImages = techIcons[circleType] || [];
-      this.applyBackgroundOpacity = true; // Aplica la opacidad al fondo
+      this.applyBackgroundOpacity = true; // Apply opacity to the background
     }
   }
 
   closePopup() {
-    console.log("pero si sale esto al abrilo esta mierda nno funciona bviue")
-    // Verifica si el popup está abierto antes de intentar cerrarlo
+    console.log("This message appears when the popup is closed, it works");
+    // Check if the popup is open before attempting to close it
     if (this.isPopupOpen) {
       this.isPopupOpen = false;
-      this.applyBackgroundOpacity = false; // Quita la opacidad del fondo
+      this.applyBackgroundOpacity = false; // Remove opacity from the background
     }
   }
 
   handleSkillsContainerClick(event: Event) {
-    // Evita que el clic se propague al div del popup
+    // Prevent the click event from propagating to the popup div
     event.stopPropagation();
 
-    // Cierra el popup si está abierto
+    // Close the popup if it's open
     if (this.isPopupOpen) {
       this.closePopup();
     }
