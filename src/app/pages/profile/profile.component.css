@@ -53,3 +53,18 @@
     width: 30em;
   }
 }
+
+.move-image {
+  animation-name: move-right;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translatex(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
