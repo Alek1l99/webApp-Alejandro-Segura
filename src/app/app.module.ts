@@ -9,6 +9,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SkillsComponent } from './pages/skills/skills.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -18,11 +22,14 @@ import { SkillsComponent } from './pages/skills/skills.component';
     FooterComponent,
     HomeComponent,
     ProfileComponent,
-    SkillsComponent
+    SkillsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
