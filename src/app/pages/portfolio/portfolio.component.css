@@ -169,3 +169,71 @@ p span{
   left: 0;
   animation: slide-up 0s;
 }
+
+@media only screen and (max-width: 46em) {
+  .column-left, .column-right, .column-middle{
+    display: none;
+}
+/* Estilos predeterminados para pantallas más grandes (desktop) */
+.column,
+.row {
+  flex: 1;
+  padding: 0 1.4em;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  perspective: 100em;
+  overflow: auto;
+  padding-bottom:2em;
+}
+
+.row p,.row span{
+  font-size: 1em;
+}
+.card-content-front{
+  display: block;
+  box-shadow: 0 -1em .5em rgba(0, 0, 0, 0.3); /* Propiedad de sombra */
+}
+.portfolio-container {
+  display: flex;
+  margin: 0 4em 0 7em;
+  justify-content: space-between;
+  gap: 5em;
+  align-items: flex-start;
+}
+
+/* Estilos para dispositivos móviles (ancho máximo de 768px) */
+@media (max-width: 46em) {
+
+  .row {
+    display: block; /* Cambiamos a un diseño de bloque en lugar de flexbox */
+    margin: 0; /* Eliminamos el margen lateral */
+  }
+
+  .card {
+    width: 100%; /* La tarjeta ocupa todo el ancho en dispositivos móviles */
+    margin: 1em 0; /* Agregamos un espacio entre las tarjetas */
+  }
+
+  /* Estilos específicos para el contenido frontal y posterior de la tarjeta en dispositivos móviles */
+  .card-content-front,
+  .card-content-back {
+    padding: 1em; /* Ajusta el espaciado del contenido de la tarjeta */
+  }
+
+  /* Ajusta el tamaño de la imagen de fondo de la tarjeta en dispositivos móviles */
+  .background-image img {
+    object-fit: cover;
+  }
+
+  /* Elimina la animación de desplazamiento en dispositivos móviles */
+  .column-left .card,
+  .column-middle .card,
+  .column-right .card {
+    animation: none;
+  }
+}
+
+
+
+}

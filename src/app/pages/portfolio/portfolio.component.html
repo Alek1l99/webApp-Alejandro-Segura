@@ -68,3 +68,28 @@
     </div>
   </div>
 </div>
+
+
+<div class="mobile-portfolio-container">
+ <div class="row">
+  <div class="card" *ngFor="let item of cardDetails; let i = index" [class.active]="selectedCardIndices[0] === i" (click)="toggleCard(i, 0, item)">
+    <div class="card-inner">
+      <!-- Card Frontal -->
+      <div class="background-image">
+        <img [src]="item.background.url" [alt]="item.background.alt">
+      </div>
+      <div class="card-content-front" *ngIf="!item.isClicked" (mouseenter)="item.isHovered = true" (mouseleave)="item.isHovered = false">
+        <!-- Contenido detallado del proyecto -->
+        <p>{{ item.preview }}. <br><span>Simply hover over this card to get more information.</span></p>
+      </div>
+      <div class="card-content-back" *ngIf="item.isClicked">
+        <!-- Contenido detallado del proyecto -->
+        <p>{{ item.detail }}</p>
+        <a *ngIf="item.url !== 'unavailable' && item.url.trim() !== ''" href="{{ item.url }}" class="outline-button" target="_blank">
+          <span>Visit Web Site</span>
+        </a>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
