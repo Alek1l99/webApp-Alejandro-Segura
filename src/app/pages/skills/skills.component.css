@@ -177,7 +177,6 @@ li {
 }
 
 
-@media screen and (min-width: 120em) {
   /* General Styles */
 .skillsContainer {
   padding: 0 8em 0 10em;
@@ -212,5 +211,4 @@ li {
 
 .skills-progress {
   flex: 1;
-}
 }
