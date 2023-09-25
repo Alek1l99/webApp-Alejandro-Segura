@@ -11,6 +11,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { SkillsComponent } from './pages/skills/skills.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 
 
@@ -23,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     ProfileComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

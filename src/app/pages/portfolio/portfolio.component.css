@@ -1,0 +1,171 @@
+/* Portfolio Container */
+p span{
+  font-weight: 100;
+  font-size: .7em;
+}
+.portfolio-container {
+  display: flex;
+  margin: 0 4em 0 7em;
+  justify-content: space-between;
+  gap: 5em;
+  align-items: flex-start;
+}
+
+/* Columns */
+.column {
+  flex: 1;
+  padding: 0 1.4em;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  perspective: 100em;
+}
+
+.column-container .column-right {
+  flex-direction: row-reverse;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  margin: 2em 0;
+  width: 100%;
+  height: 40%;
+  border-radius: 2em;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+  flex-direction:column;
+  align-items: flex-start;
+  justify-content: center;
+  transform-style: preserve-3d; /* Habilita el espacio 3D para las transformaciones */
+  transition: transform 0.3s ease-in-out; /* Transición suave para transformaciones */
+}
+
+.card img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.card-content-front, .card-content-back {
+  display: none;
+  padding: 2em;
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: -webkit-fill-available;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateZ(1px);
+}
+
+.card:hover .card-content-front{
+  display: block;
+  box-shadow: 0 -1em .5em rgba(0, 0, 0, 0.3); /* Propiedad de sombra */
+}
+.card.active .card-content-back{
+  display: block;
+  font-size: .9em;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card:active .card-content-front{
+  display: none;
+}
+
+/* Outline Button */
+.outline-button {
+  display: inline-block;
+  padding: 0.4em 1em;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: 2px solid #6204BF;
+  font-size: 1.125rem;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.outline-button:hover {
+  border-color: transparent;
+  background-color: #6204BF;
+  color: #fff;
+}
+
+.outline-button:active {
+  border-color: #6204BF;
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Hover Effect */
+.card:hover {
+  border-radius: 1.5em;
+  z-index: 100;
+}
+
+/*Columna izquierda*/
+
+.card.active {
+  align-content: flex-start;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+.column-middle .card.active .card-inner{
+  transform: rotateY(0deg);
+}
+
+.card.active .card-inner{
+  width: 100%;
+  height: -webkit-fill-available;
+  transform: rotateY(180deg);/* Contrarresta la rotación de la tarjeta */
+}
+
+
+/* Animation */
+.column-left .card {
+  animation: slide-up 10s linear infinite;
+}
+.column-middle .card {
+  animation: slide-down 12s linear infinite;
+}
+.column-right .card {
+  animation: slide-up 10s linear infinite;
+}
+
+/* Keyframes */
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-190%);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-190%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Parar Animacion */
+.column-left .card:hover,
+.column-right .card:hover {
+  border-radius: 2em;
+  position: fixed;
+  margin: 0;
+  top: 26%;
+  left: 0;
+  animation: slide-up 0s;
+}
