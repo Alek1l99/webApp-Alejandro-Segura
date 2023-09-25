@@ -15,7 +15,7 @@
 .sideRender {
   position: fixed;
   width: 8.5em; /* Fixed width in em or rem */
-  height: 100%; /* Occupy full available height */
+  height: 100vh;/* Occupy full available height */
 }
 
 /* Styles for the content */
@@ -24,13 +24,16 @@
   align-items: center;
   justify-content: center;
   padding: 2em; /* Padding in em or rem */
-  height: 100%; /* Occupy full available height */
+  /* Occupy full available height */
   background-color: #fff; /* Example: a white background to highlight content */
   box-shadow: 0px 0.3em 0.6em rgba(0, 0, 0, 0.6); /* Add shadow to content if necessary */
 }
 
 /* Media query for small screens */
 @media only screen and (max-width: 46em) {
+  .barRender {
+    display: block;
+  }
   .renderContainer {
     grid-template-columns: 100%;
   }

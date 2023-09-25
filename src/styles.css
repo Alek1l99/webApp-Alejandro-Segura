@@ -85,3 +85,12 @@ a {
   /* Adjusted to relative font size */
   color: #fff;
 }
+
+
+@media only screen and (max-width: 46em) {
+
+h1{
+  font-size: 3em;
+}
+
+}
