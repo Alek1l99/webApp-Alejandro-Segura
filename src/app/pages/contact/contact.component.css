@@ -149,8 +149,6 @@ textarea::placeholder {
   }
 }
 
-/* Media Query for Large Screens */
-@media screen and (min-width: 120em) {
   h1 {
     font-size: 2.5em;
     margin-bottom: 1.2em;
@@ -195,11 +193,3 @@ textarea::placeholder {
     line-height: 1.5em;
   }
 
-  /* Estilos para el pop-up */
-
-
-
-
-
-
-}
